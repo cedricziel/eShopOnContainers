@@ -34,6 +34,7 @@ export class Identity implements OnInit  {
 
         if (this.authenticated) {
             if (this.service.UserData)
+                ineum('user', null, null, this.service.UserData.email);
                 this.userName = this.service.UserData.email;
         }
     }
